@@ -1,2 +1,2 @@
-# jieuuniverse-jieuuniverse.github.io
+# jieuuniverse.github.io
 portfolio
