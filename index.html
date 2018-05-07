@@ -1,119 +1,482 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
+  
+  
+  
 <!--JS SCRIPTS-->  
 <script>
 $(document).ready(function(){ 
-$("p").addClass("animated slideInLeft");
 $(".box1").addClass("animated tada");
+$(".box2").addClass("animated flipInY");
+$(".box3").addClass("animated hinge");
 $(".box4").addClass("animated swing");
 $(".box5").addClass("animated fadeInUpBig");
 $(".box6").addClass("animated lightSpeedIn");
-$(".box7").addClass("animated hinge");
+$(".box7").addClass("animated lightSpeedIn");
 $(".box8").addClass("animated zoomIn");
 $(".box9").addClass("animated flash");
 });
   </script>
 
+  
+  
+  
 <!--CSS STYLE-->
 <style type="text/css">
-h1{
-  color:#d98ba6;
-  border:solid 1px;
+@import url('https://fonts.googleapis.com/css?family=Chivo:400,400i,700,700i,900,900i|Noto+Sans:400,400i,700,700i|Heebo:100,300,400,700,900|Open+Sans:300,300i,400,400i,700,700i');
+
+#header{
+  position:relative;
+  background-color:#fff;
+  opacity:1;
+  z-index:20;
 }
-p{
-  border:solid 1px;
-}
-body{
-  color:#ae8bd9;
-}
-a{
-  color:#fff;
-  background:#f8e83b;
-  padding:0px 2px 0px 2px;
-  margin-right:1px;
-}
+  
 .container{
-  top:10px;
-  left:100px;
-  max-width:575px;
+  max-width:750px;
+  height:auto;
+  background-color:#fff;
+  padding-left:15px;
+  padding-bottom:20px;
+  margin-bottom:50px;
 }
-.col-xs-4{
+  
+h1{
+  position:relative;
+  display:inline-block;
+  margin-right:5px;
+  background-color:#fff;
+  color:#3b5cff;
+  border:none;
+  font-family: 'Chivo', sans-serif;
+  font-weight:900;
+  font-size:64px;
+  text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
+  z-index:none;
 }
+  
+h1 a, h1 a:hover{
+  background-color:#fff;
+  color:#3b5cff;
+  border:none;
+  font-family: 'Chivo', sans-serif;
+  font-weight:900;
+  font-size:64px;
+  text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
+  text-decoration:none;
+  cursor:crosshair;
+}
+
+
+/* SAVE FOR LATER
+h3{
+  position:relative;
+  left:-75px;
+  padding-top:20px;
+  text-align:bottom-right;
+  padding-left:0px;
+  background-color:none;
+  display:inline-block;
+  opacity: 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight:700;
+  -moz-transition: 2.5s, 1s;  
+  -webkit-transition: 2.5s, 1s;
+  z-index:10;
+}
+
+h3:hover{
+  color:#87d875;
+  background-color:none;
+  padding-top:20px;
+  padding-left:75px;
+  opacity:1;
+  -moz-transition: .5s ease-in-out;  
+  -webkit-transition: .5s ease-in-out;
+}
+SAVE FOR LATER */
+
+
+.navbar{
+  background-color:#fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  margin-left:-40px;
+  z-index:40;
+  border: solid 1px #000;
+}
+  
+.menu{
+position: -webkit-sticky;
+  position: sticky;
+  top:0;
+  z-index:40;
+}
+  
+.nav{
+  display:inline-block;
+  float:left;
+  margin-right:none;
+  color:#3b5cff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:28px;
+  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+  -moz-transition: 3s, 1.5s;  
+  -webkit-transition: 3s, 1.5s;
+  cursor:crosshair;
+}
+
+.nav a{
+  color:#3b5cff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:28px;
+  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+  text-decoration:none;
+  -moz-transition: 1s ease-in-out;  
+  -webkit-transition: 1s ease-in-out;
+  cursor:crosshair;
+}
+  
+.nav a:hover{
+  background-color:none;
+  cursor:crosshair;
+}
+  
+.nav:hover .dropdown1{
+  display:block;
+  float:none;
+}
+
+.toggle,
+[id^=drop] {
+	display: none;
+  color:#fff;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:28px;
+  text-shadow: -3px 2px 0 #000, -4px 3px 0 #ff0;
+  -moz-transition: 3s, 1.5s;  
+  -webkit-transition: 3s, 1.5s;
+}
+
+.dropdown{
+  position:absolute;
+  width:auto;
+  display:none;
+  background-color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  color:#000;
+  font-weight:400;
+  font-size:12px;
+  text-shadow:none;
+}
+
+.dropdown a{
+  width:100%;
+  color: #000;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+  font-size:12px;
+  text-shadow:none;
+  text-decoration: none;
+  display: block;
+  padding-top:5px;
+  padding-bottom:5px;
+  border-bottom: solid 1px #000;
+}
+
+.dropdown a:hover{
+  color:#000;
+  background-color:#ff0;
+}
+
+.nav:hover .dropdown{
+  display:block;
+  float:none;
+}
+
+.dropdown1{
+  position:absolute;
+  width:auto;
+  display:none;
+  background-color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  color:#000;
+  font-weight:400;
+  font-size:12px;
+  text-shadow:none;
+}
+
+
+@media only screen and (max-width:768px){
+  .dropdown1 a{
+  width:100%;
+  color: #000;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+  font-size:12px;
+  text-shadow:none;
+  text-decoration: none;
+  display: block;
+  padding-top:5px;
+  padding-bottom:5px;
+  border-bottom: solid 1px #000;
+}
+  
+.dropdown1 a:hover{
+  color:#000;
+  background-color:#ff0;
+}
+  
+.nav{
+  width:100%;
+  float:left;
+  margin-left:none;
+  position:relative;
+}
+ 
+.navbar{
+  position:relative;
+  margin-left:none;
+}
+  
+.nav:hover .dropdown{
+  display:none;
+}
+  
+  	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.toggle + a, .menu, .dropdown1{
+    position: -webkit-sticky;
+    position: sticky;
+    top:40px;
+    display:none;
+    color:#3b5cff;
+    font-family: 'Chivo', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s;
+    z-index:40;
+	}
+
+	/* Styling the toggle lable */
+	.toggle {
+    position: -webkit-sticky;
+    position: sticky;
+    top:0;
+    padding-left:10px;
+		display: block;
+    background-color:#fff;
+    opacity:1;
+    color:#3b5cff;
+    font-family: 'Chivo', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    border:solid 1px #000;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s; 
+    z-index:40;
+	}
+  
+  .toggle2{
+    padding-left:0;
+    border:none;
+	}
+
+	.toggle:hover {
+		
+	}
+
+	/* Display Dropdown when clicked on Parent Lable */
+	[id^=drop]:checked + ul {
+		display:block;
+    float:none;
+    z-index:40;
+    transition: 3s ease-in-out;
+	}
+  
+[id^=drop]:checked + .dropdown1 {
+		display:block;
+    float:none;
+    z-index:40;
+	}
+}
+
+
+
+body{
+  color:#000;
+}
+  
+p{
+  margin-top:-25px;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+}
+  
+p a{
+  color:#fff;
+  background-color:#f8e83b;
+}
+
 .img{
   width:100%;
 }
-.box3{border:#d98ba6 outset 5px;
+  
+.projects{
+  position:relative;
+  padding-top:0px;
 }
-.box4{color:#999999;
-  border:dashed 1px;
+  
+.pimage{
+ padding-top:50px;
 }
-.box5{color:#fedcde;
-  border:solid 2px;
+  
+.desc{
+  position:relative;
+  left:1px;
+  top:-35px;
+  background-color:none;
+  color:#fff;
+  border:none;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:calc(22px + 1.5vw);
+  text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
 }
-.box6{color:#fef19c;
-  border:dotted 5px;
-}
-
-#board{
-  position:absolute;
-    }
   </style>
   
 <title>the jieuuniverse</title>
   </head>
 
+  
+  
+  
+  
 <!--HTML CODE-->
-<body>
+
 <div class="container">
-  <div id="board">
-  <img src="https://s9.postimg.cc/ht92ikbjz/check-in-grid.jpg" class="img-responsive">
-  </div>
-  <div class="row">
-<h1 class="animated swing">*folio</h1>
-  </div>
-<div class="row">
-  <div class="col-xs-4">
-    <a href="2d"><img class="img" src="https://s9.postimg.cc/c3styj0bj/image.jpg"></a>
-  </div>
-  <div class="col-xs-4">
-    <p>Sailor moon<a href="https://en.wikipedia.org/wiki/Sailor_Moon">here</a>!</p>
-    </div>
-    <div class="box3 col-xs-4">
-      <a href="motion"><img class="img" src="https://s9.postimg.cc/dvlstfz3z/image.jpg"></a>
-  </div>
-</div>
+<div id="header">
+  <h1 class="animated swing"><a href="/">안녕,</a></h1>
   
-<div class="row">
-  <div class="box4 col-xs-4">
-    hello this is box 4. how are you doing today this fine evening?
+  
+<!--SAVE FOR LATER
+  
+<h3>[2d]</h3>
+ 
+SAVE FOR LATER-->
+  
   </div>
-  <div class="box5 col-xs-4">
-    <a href="design"><img class="img" src="https://s9.postimg.cc/4b266jmmn/image.jpg"></a>
-  </div>
-  <div class="box6 col-xs-4">
-    hello this is box 6.
-  </div>
+ 
+<label for="drop" class="toggle">navigation</label>
+        <input type="checkbox" id="drop" />
+            <ul class="menu">
+  <div class="navbar">
+   
+  <div class="nav">
+    <label for="drop-1" class="toggle toggle2">2d</label>
+    <a href="#">2d</a>
+    <input type="checkbox" id="drop-1" />
+      <div class="dropdown dropdown1">
+     <a href="/">project name will be here longer here okay?</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+    <a href="/">project name will be here</a>
+    <a href="/">Link 5</a>
+    <a href="/">Link 6</a>
+   </div>
+   </div>   
+      
+   <div class="nav">
+     <label for="drop-2" class="toggle toggle2">3d</label>
+      <a href="#">3d&nbsp;</a>
+     <input type="checkbox" id="drop-2" />
+   <div class="dropdown dropdown1">
+     <a href="/">project name will be here</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+   </div>
+   </div>
+      
+    <div class="nav">
+      <label for="drop-3" class="toggle toggle2">design</label>
+      <a href="#">design&nbsp;</a>
+      <input type="checkbox" id="drop-3" />
+      <div class="dropdown dropdown1">
+     <a href="/">project name will be here</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+   </div>
+   </div>
+    <div class="nav">
+      <label for="drop-4" class="toggle toggle2">motion</label>
+      <a href="#">motion&nbsp;</a>
+      <input type="checkbox" id="drop-4" />
+      <div class="dropdown dropdown1">
+     <a href="/">project name will be here</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+   </div>
+   </div>
+    <div class="nav">
+      <label for="drop-5" class="toggle toggle2">misc</label>
+      <a href="#">misc</a>
+      <input type="checkbox" id="drop-5" />
+      <div class="dropdown dropdown1">
+     <a href="/">project name will be here</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+   </div>
+   </div>
+  <div class="nav">
+    <a href="#">a.</a>
+    <!--
+      <div class="dropdown">
+     <a href="/">project name will be here</a>
+    <a href="/">Link 2</a>
+    <a href="/">Link 3</a>
+   </div>
+-->
+   </div>
+      </div>
+  </ul>
+       
+  
+
+<div class="projects">
+<div class="pimage">
+<img class="img-responsive" src="http://via.placeholder.com/750x450/3b5cff/3b5cff.png">
+  <div class="desc">[project name #1]</div>
+  <p>Say cheese cow mascarpone. Cheese slices airedale edam cauliflower cheese blue castello st. agur blue cheese caerphilly stinking bishop. Chalk and cheese brie cheesy feet when the cheese comes out everybody's happy cheese triangles fondue cheese strings chalk and cheese. Monterey jack when the cheese comes out everybody's happy when the cheese comes out everybody's happy dolcelatte cheeseburger emmental cheesecake chalk and cheese. Gouda cheese and biscuits manchego stinking bishop caerphilly macaroni cheese cut the cheese paneer. Cut the cheese chalk and cheese halloumi cheesy grin halloumi say cheese emmental cheese and biscuits. Danish fontina mascarpone queso cheese and wine rubber cheese everyone loves bavarian bergkase cheese and biscuits. When the cheese comes out everybody's happy.
+
+Caerphilly cheese and biscuits cheesy feet. Croque monsieur ricotta cheeseburger who moved my cheese say cheese say cheese camembert de normandie goat. Fromage airedale rubber cheese lancashire boursin bocconcini mozzarella pepper jack. Everyone loves roquefort cheddar edam bocconcini port-salut everyone loves who moved my cheese. Gouda when the cheese comes out everybody's happy parmesan melted cheese when the cheese comes out everybody's happy goat cheesy grin swiss. Paneer feta pecorino cheese slices parmesan.</p>
   </div>
   
-<div class="row">
-  <div class="box7 col-xs-4">
-    hello this is box 7. how are you doing today this sunshine-filled morning?
+  <div class="pimage">
+<img class="img-responsive" src="http://via.placeholder.com/750x450/3b5cff/3b5cff.png">
+  <div class="desc">[project name #2]</div>
+  <p>Say cheese cow mascarpone. Cheese slices airedale edam cauliflower cheese blue castello st. agur blue cheese caerphilly stinking bishop. Chalk and cheese brie cheesy feet when the cheese comes out everybody's happy cheese triangles fondue cheese strings chalk and cheese. Monterey jack when the cheese comes out everybody's happy when the cheese comes out everybody's happy dolcelatte cheeseburger emmental cheesecake chalk and cheese. Gouda cheese and biscuits manchego stinking bishop caerphilly macaroni cheese cut the cheese paneer. Cut the cheese chalk and cheese halloumi cheesy grin halloumi say cheese emmental cheese and biscuits. Danish fontina mascarpone queso cheese and wine rubber cheese everyone loves bavarian bergkase cheese and biscuits. When the cheese comes out everybody's happy.
+
+Caerphilly cheese and biscuits cheesy feet. Croque monsieur ricotta cheeseburger who moved my cheese say cheese say cheese camembert de normandie goat. Fromage airedale rubber cheese lancashire boursin bocconcini mozzarella pepper jack. Everyone loves roquefort cheddar edam bocconcini port-salut everyone loves who moved my cheese. Gouda when the cheese comes out everybody's happy parmesan melted cheese when the cheese comes out everybody's happy goat cheesy grin swiss. Paneer feta pecorino cheese slices parmesan.</p>
   </div>
-  <div class="box8 col-xs-4">
-    <a href="3d"><img class="img" src="https://s9.postimg.cc/wnxnx0nsf/image.jpg"></a>
+
+  
   </div>
-  <div class="box9 col-xs-4">
-    <a href="misc"><img class="img" src="https://s9.postimg.cc/x0p237lhr/image.jpg"></a>
-  </div>
-  </div>
-</div>
-  </body>
+ 
 </html>
