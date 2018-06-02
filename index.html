@@ -13,7 +13,7 @@
   
   
   
-<!--JS SCRIPTS-->  
+<!--START JS SCRIPTS-->  
 <script>
 $(document).ready(function(){ 
 $(".box1").addClass("animated tada");
@@ -26,12 +26,13 @@ $(".box7").addClass("animated lightSpeedIn");
 $(".box8").addClass("animated zoomIn");
 $(".box9").addClass("animated flash");
 });
-  </script>
+</script>
+<!--END JS SCRIPTS-->  
 
   
   
   
-<!--CSS STYLE-->
+<!--START CSS STYLE-->
 <style type="text/css">
 @import url('https://fonts.googleapis.com/css?family=Chivo:400,400i,700,700i,900,900i|Noto+Sans:400,400i,700,700i|Heebo:100,300,400,700,900|Open+Sans:300,300i,400,400i,700,700i');
 
@@ -40,35 +41,30 @@ $(".box9").addClass("animated flash");
   background-color:#fff;
   opacity:1;
   z-index:20;
+  padding-bottom:5px;
 }
-  
 .container{
   max-width:750px;
-  height:auto;
   background-color:#fff;
   padding-left:15px;
   padding-bottom:20px;
-  margin-bottom:50px;
+
 }
-  
 h1{
   position:relative;
   display:inline-block;
   margin-right:5px;
   background-color:#fff;
   color:#3b5cff;
-  border:none;
   font-family: 'Chivo', sans-serif;
-  font-weight:900;
+  font-weight:700;
   font-size:64px;
   text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
   z-index:none;
 }
-  
 h1 a, h1 a:hover{
   background-color:#fff;
   color:#3b5cff;
-  border:none;
   font-family: 'Chivo', sans-serif;
   font-weight:900;
   font-size:64px;
@@ -115,15 +111,14 @@ SAVE FOR LATER */
   margin-left:-40px;
   z-index:40;
   border: solid 1px #000;
+  border-radius:0px;
 }
-  
 .menu{
 position: -webkit-sticky;
   position: sticky;
   top:0;
   z-index:40;
 }
-  
 .nav{
   display:inline-block;
   float:left;
@@ -149,16 +144,16 @@ position: -webkit-sticky;
   -webkit-transition: 1s ease-in-out;
   cursor:crosshair;
 }
-  
 .nav a:hover{
   background-color:none;
   cursor:crosshair;
 }
-  
 .nav:hover .dropdown1{
   display:block;
   float:none;
 }
+
+
 
 .toggle,
 [id^=drop] {
@@ -171,6 +166,7 @@ position: -webkit-sticky;
   -moz-transition: 3s, 1.5s;  
   -webkit-transition: 3s, 1.5s;
 }
+
 
 .dropdown{
   position:absolute;
@@ -203,6 +199,7 @@ position: -webkit-sticky;
   background-color:#ff0;
 }
 
+
 .nav:hover .dropdown{
   display:block;
   float:none;
@@ -220,6 +217,78 @@ position: -webkit-sticky;
   text-shadow:none;
 }
 
+body{
+  color:#000;
+}
+
+p{
+  margin-top:-25px;
+  font-family: 'Heebo', sans-serif;
+  font-weight:300;
+
+}
+p a{
+  color:#fff;
+  background-color:#f8e83b;
+}
+
+.img{
+  width:100%;
+}
+.projects{
+  position:relative;
+  padding-top:150px;
+}
+
+.pimage{
+ padding-top:50px;
+}
+
+.desc{
+  position:relative;
+  left:1px;
+  top:-35px;
+  background-color:none;
+  color:#fff;
+  border:none;
+  font-family: 'Chivo', sans-serif;
+  font-weight:700;
+  font-size:calc(22px + 1.5vw);
+  text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+}
+
+.intro{
+  position:relative;
+  padding:25px 25px 25px 35px;
+  top:75px;
+  margin-left:7px;
+  margin-bottom:100px;
+  background-color:#fff;
+  color:#000;
+  border:solid 2px #000;
+  font-family: 'Chivo', sans-serif;
+  font-weight:400;
+  font-size:calc(13px + 1.5vw);
+  text-shadow:none;
+  box-shadow: 0px 0px 0 #000, -5px 5px 0 #ff0, -7px 7px 0 #000;
+  line-height:calc(38px + 1.5vw);
+}
+
+.arrow{
+  font-size:calc(38px + 1.5vw);
+  text-align:center;
+  padding:calc(35px + 1.5vw) 0px calc(35px + 1.5vw) 0px;
+}
+
+
+
+/*** START OF MEDIA QUERIES!!!! ***/
+@media screen and (min-width: 1824px) {
+  .intro{
+    font-size: 32px;
+  }
+}
+
 
 @media only screen and (max-width:768px){
   .dropdown1 a{
@@ -235,31 +304,29 @@ position: -webkit-sticky;
   padding-bottom:5px;
   border-bottom: solid 1px #000;
 }
-  
 .dropdown1 a:hover{
   color:#000;
   background-color:#ff0;
 }
   
-.nav{
-  width:100%;
-  float:left;
-  margin-left:none;
-  position:relative;
-}
+  .nav{
+    width:100%;
+    float:left;
+    margin-left:none;
+    position:relative;
+  }
  
-.navbar{
-  position:relative;
-  margin-left:none;
-}
+  .navbar{
+    position:relative;
+    margin-left:none;
+  }
   
-.nav:hover .dropdown{
+ .nav:hover .dropdown{
   display:none;
 }
-  
   	/* Hide the navigation menu by default */
 	/* Also hide the  */
-	.toggle + a, .menu, .dropdown1{
+	.toggle + a, .menu{
     position: -webkit-sticky;
     position: sticky;
     top:40px;
@@ -274,6 +341,20 @@ position: -webkit-sticky;
     z-index:40;
 	}
 
+  .dropdown1{
+   position:relative;
+    display:none;
+    color:#3b5cff;
+    font-family: 'Chivo', sans-serif;
+    font-weight:700;
+    font-size:28px;
+    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    -moz-transition: 3s, 1.5s;  
+    -webkit-transition: 3s, 1.5s;
+    z-index:30;
+	}
+  
+  
 	/* Styling the toggle lable */
 	.toggle {
     position: -webkit-sticky;
@@ -295,8 +376,10 @@ position: -webkit-sticky;
 	}
   
   .toggle2{
+    position: relative;
     padding-left:0;
     border:none;
+    z-index:30;
 	}
 
 	.toggle:hover {
@@ -307,70 +390,33 @@ position: -webkit-sticky;
 	[id^=drop]:checked + ul {
 		display:block;
     float:none;
-    z-index:40;
+    z-index:30;
     transition: 3s ease-in-out;
 	}
   
 [id^=drop]:checked + .dropdown1 {
 		display:block;
     float:none;
-    z-index:40;
+    z-index:30;
 	}
 }
 
+/*** END OF MEDIA QUERIES!!!! ***/
+</style>
+<!--END CSS STYLE-->
+	
 
-
-body{
-  color:#000;
-}
-  
-p{
-  margin-top:-25px;
-  font-family: 'Heebo', sans-serif;
-  font-weight:300;
-}
-  
-p a{
-  color:#fff;
-  background-color:#f8e83b;
-}
-
-.img{
-  width:100%;
-}
-  
-.projects{
-  position:relative;
-  padding-top:0px;
-}
-  
-.pimage{
- padding-top:50px;
-}
-  
-.desc{
-  position:relative;
-  left:1px;
-  top:-35px;
-  background-color:none;
-  color:#fff;
-  border:none;
-  font-family: 'Chivo', sans-serif;
-  font-weight:700;
-  font-size:calc(22px + 1.5vw);
-  text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
-}
-  </style>
-  
 <title>the jieuuniverse</title>
-  </head>
+</head>
 
   
   
+	
+	
+	
   
   
-<!--HTML CODE-->
-
+<!--START HTML CODE-->
 <div class="container">
 <div id="header">
   <h1 class="animated swing"><a href="/">안녕,</a></h1>
@@ -388,7 +434,6 @@ SAVE FOR LATER-->
         <input type="checkbox" id="drop" />
             <ul class="menu">
   <div class="navbar">
-   
   <div class="nav">
     <label for="drop-1" class="toggle toggle2">2d</label>
     <a href="#">2d</a>
@@ -457,26 +502,20 @@ SAVE FOR LATER-->
       </div>
   </ul>
        
-  
 
-<div class="projects">
-<div class="pimage">
-<img class="img-responsive" src="http://via.placeholder.com/750x450/3b5cff/3b5cff.png">
-  <div class="desc">[project name #1]</div>
-  <p>Say cheese cow mascarpone. Cheese slices airedale edam cauliflower cheese blue castello st. agur blue cheese caerphilly stinking bishop. Chalk and cheese brie cheesy feet when the cheese comes out everybody's happy cheese triangles fondue cheese strings chalk and cheese. Monterey jack when the cheese comes out everybody's happy when the cheese comes out everybody's happy dolcelatte cheeseburger emmental cheesecake chalk and cheese. Gouda cheese and biscuits manchego stinking bishop caerphilly macaroni cheese cut the cheese paneer. Cut the cheese chalk and cheese halloumi cheesy grin halloumi say cheese emmental cheese and biscuits. Danish fontina mascarpone queso cheese and wine rubber cheese everyone loves bavarian bergkase cheese and biscuits. When the cheese comes out everybody's happy.
 
-Caerphilly cheese and biscuits cheesy feet. Croque monsieur ricotta cheeseburger who moved my cheese say cheese say cheese camembert de normandie goat. Fromage airedale rubber cheese lancashire boursin bocconcini mozzarella pepper jack. Everyone loves roquefort cheddar edam bocconcini port-salut everyone loves who moved my cheese. Gouda when the cheese comes out everybody's happy parmesan melted cheese when the cheese comes out everybody's happy goat cheesy grin swiss. Paneer feta pecorino cheese slices parmesan.</p>
-  </div>
-  
-  <div class="pimage">
-<img class="img-responsive" src="http://via.placeholder.com/750x450/3b5cff/3b5cff.png">
-  <div class="desc">[project name #2]</div>
-  <p>Say cheese cow mascarpone. Cheese slices airedale edam cauliflower cheese blue castello st. agur blue cheese caerphilly stinking bishop. Chalk and cheese brie cheesy feet when the cheese comes out everybody's happy cheese triangles fondue cheese strings chalk and cheese. Monterey jack when the cheese comes out everybody's happy when the cheese comes out everybody's happy dolcelatte cheeseburger emmental cheesecake chalk and cheese. Gouda cheese and biscuits manchego stinking bishop caerphilly macaroni cheese cut the cheese paneer. Cut the cheese chalk and cheese halloumi cheesy grin halloumi say cheese emmental cheese and biscuits. Danish fontina mascarpone queso cheese and wine rubber cheese everyone loves bavarian bergkase cheese and biscuits. When the cheese comes out everybody's happy.
-
-Caerphilly cheese and biscuits cheesy feet. Croque monsieur ricotta cheeseburger who moved my cheese say cheese say cheese camembert de normandie goat. Fromage airedale rubber cheese lancashire boursin bocconcini mozzarella pepper jack. Everyone loves roquefort cheddar edam bocconcini port-salut everyone loves who moved my cheese. Gouda when the cheese comes out everybody's happy parmesan melted cheese when the cheese comes out everybody's happy goat cheesy grin swiss. Paneer feta pecorino cheese slices parmesan.</p>
+  <div class="intro">
+    <i><a style="color:#3b5cff; font-weight:700; font-size:calc(32px + 1.5vw); text-shadow:-1px 1px 0 #000, -3px 3px 0 #ff0, -4px 4px 0 #000;">notice,</a></i>
+    <br/><br/>
+    <a style="background-color:#ff0;">창의력</a> + <a style="text-decoration:underline wavy #3b5cff;">참신성</a> 넘치는 인간 사람 = <a style="background-color:#ff0; text-decoration:underline wavy #3b5cff;">홍지은</a>!
+    <br/>현재 2018 평창 동계올림픽과 패럴림픽 자원봉사자 활동 맞추고 열심히 취업준비 중이니 <a style="color:#3b5cff; text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;">♡</a>콜은 언제든지 <a style="text-decoration:underline double #3b5cff;">환영합니다</a>.
+    
+<div class="arrow">↯</div>
+    
+creative human being a.k.a. <a style="background-color:#ff0; text-decoration:underline wavy #3b5cff;">jieun</a>!
+    <br/>looking for opportunities to share my growing potential after recently wrapping up volunteering at the 2018 pyeongchang winter olympics and paralympics. <a style="color:#3b5cff; text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;">e-mails</a> are always <a style="text-decoration:underline double #3b5cff;">welcome</a>.
+</div>
   </div>
 
-  
-  </div>
- 
 </html>
+<!--END HTML CODE-->
