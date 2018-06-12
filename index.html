@@ -43,13 +43,22 @@ $(".box9").addClass("animated flash");
   z-index:20;
   padding-bottom:5px;
 }
+
 .container{
   max-width:750px;
   background-color:#fff;
   padding-left:15px;
   padding-bottom:20px;
-
 }
+
+  .footer{
+  padding-top:20px;
+  padding-bottom:10px;
+  font-size:12px;
+  text-align:center;
+  position: bottom;
+}
+	
 h1{
   position:relative;
   display:inline-block;
@@ -62,6 +71,7 @@ h1{
   text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
   z-index:none;
 }
+
 h1 a, h1 a:hover{
   background-color:#fff;
   color:#3b5cff;
@@ -73,35 +83,31 @@ h1 a, h1 a:hover{
   cursor:crosshair;
 }
 
-
-/* SAVE FOR LATER
 h3{
-  position:relative;
-  left:-75px;
-  padding-top:20px;
-  text-align:bottom-right;
-  padding-left:0px;
+  color:#000;
   background-color:none;
   display:inline-block;
-  opacity: 0;
   font-family: 'Noto Sans', sans-serif;
-  font-weight:700;
+  font-weight:400;
+  font-size:16px;
   -moz-transition: 2.5s, 1s;  
   -webkit-transition: 2.5s, 1s;
   z-index:10;
+  margin-right:15px;
+}
+
+h3 a, h3 a:hover{
+  color:#000;
+  cursor:crosshair;
+  text-decoration:none;
 }
 
 h3:hover{
-  color:#87d875;
-  background-color:none;
-  padding-top:20px;
-  padding-left:75px;
-  opacity:1;
+  color:#000;
+  background-color:#ff0;
   -moz-transition: .5s ease-in-out;  
   -webkit-transition: .5s ease-in-out;
 }
-SAVE FOR LATER */
-
 
 .navbar{
   background-color:#fff;
@@ -113,12 +119,14 @@ SAVE FOR LATER */
   border: solid 1px #000;
   border-radius:0px;
 }
+
 .menu{
 position: -webkit-sticky;
   position: sticky;
   top:0;
   z-index:40;
 }
+
 .nav{
   display:inline-block;
   float:left;
@@ -144,15 +152,16 @@ position: -webkit-sticky;
   -webkit-transition: 1s ease-in-out;
   cursor:crosshair;
 }
+
 .nav a:hover{
   background-color:none;
   cursor:crosshair;
 }
+
 .nav:hover .dropdown1{
   display:block;
   float:none;
 }
-
 
 
 .toggle,
@@ -166,7 +175,6 @@ position: -webkit-sticky;
   -moz-transition: 3s, 1.5s;  
   -webkit-transition: 3s, 1.5s;
 }
-
 
 .dropdown{
   position:absolute;
@@ -189,8 +197,7 @@ position: -webkit-sticky;
   text-shadow:none;
   text-decoration: none;
   display: block;
-  padding-top:5px;
-  padding-bottom:5px;
+  padding: 5px 5px 3px 5px;
   border-bottom: solid 1px #000;
 }
 
@@ -198,7 +205,6 @@ position: -webkit-sticky;
   color:#000;
   background-color:#ff0;
 }
-
 
 .nav:hover .dropdown{
   display:block;
@@ -225,8 +231,8 @@ p{
   margin-top:-25px;
   font-family: 'Heebo', sans-serif;
   font-weight:300;
-
 }
+
 p a{
   color:#fff;
   background-color:#f8e83b;
@@ -235,6 +241,7 @@ p a{
 .img{
   width:100%;
 }
+
 .projects{
   position:relative;
   padding-top:100px;
@@ -509,18 +516,22 @@ p a{
   <div class="intro">
     <i><a style="color:#3b5cff; font-weight:700; font-size:calc(30px + 1.5vw); text-shadow:-1px 1px 0 #000, -3px 3px 0 #ff0, -4px 4px 0 #000;">notice,</a></i>
     <br/><br/>
-    공사중입니다. 양해 부탁드립니다.
+    현재 공사중이며 양해 부탁드립니다. 죄송합니다!
     <br/>
     sorry, under construction at the moment!
     <div class="arrow">↯</div>
     <a style="background-color:#ff0;">창의력</a> + <a style="text-decoration:underline wavy #3b5cff;">참신성</a> 넘치는 인간 사람 = <a style="background-color:#ff0; text-decoration:underline wavy #3b5cff;">홍지은</a>!
-    <br/>현재 2018 평창 동계올림픽과 패럴림픽 자원봉사자 활동 맞추고 열심히 취업준비 중이니 <a style="color:#3b5cff; text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;text-decoration:none;" href="mailto:jieun@nyu.edu">♡</a>콜은 언제든지 <a style="text-decoration:underline double #3b5cff;">환영합니다</a>.
+    <br/>현재 2018 평창 동계올림픽과 패럴림픽 자원봉사자 활동 맞추고 열심히 취업준비 중이니 <a style="color:#3b5cff; text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000; text-decoration:none;" href="mailto:jieun@nyu.edu">♡</a>콜은 언제든지 <a style="text-decoration:underline double #3b5cff;">환영합니다</a>.
     
 <div class="arrow">↯</div>
     
 creative human being a.k.a. <a style="background-color:#ff0; text-decoration:underline wavy #3b5cff;">jieun</a>!
     <br/>looking for opportunities to share my growing potential after recently wrapping up volunteering at the 2018 pyeongchang winter olympics and paralympics. <a style="color:#3b5cff; text-shadow: -1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000; text-decoration:none;" href="mailto:jieun@nyu.edu">e-mails</a> are always <a style="text-decoration:underline double #3b5cff;">welcome</a>.
 </div>
+  </div>
+	
+  <div class="footer">
+    &copy; 2018 made in the jieuuniverse
   </div>
 </html>
 <!--END HTML CODE-->
