@@ -80,29 +80,33 @@ h1 a, h1 a:hover{
 }
 
 h3{
+  position:relative;
   color:#000;
   background-color:none;
   display:inline-block;
   font-family: 'Heebo', sans-serif;
-  font-weight:400;
-  font-size:16px;
+  font-weight:300;
+  font-size:15px;
   -moz-transition: 2.5s, 1s;  
   -webkit-transition: 2.5s, 1s;
   z-index:10;
   margin-right:15px;
+  margin-top:55px;
 }
 
-h3 a, h3 a:hover{
+h3 a{
   color:#000;
   cursor:crosshair;
   text-decoration:none;
 }
 
-h3:hover{
+h3 a:hover{
   color:#000;
+  cursor:crosshair;
   background-color:#ff0;
   -moz-transition: .5s ease-in-out;  
   -webkit-transition: .5s ease-in-out;
+  text-decoration:none;
 }
 
 .navbar{
@@ -179,8 +183,8 @@ position: -webkit-sticky;
   background-color: #fff;
   font-family: 'Heebo', sans-serif;
   color:#000;
-  font-weight:400;
-  font-size:12px;
+  font-weight:300;
+  font-size:14px;
   text-shadow:none;
 }
 
@@ -189,7 +193,7 @@ position: -webkit-sticky;
   color: #000;
   font-family: 'Heebo', sans-serif;
   font-weight:300;
-  font-size:12px;
+  font-size:14px;
   text-shadow:none;
   text-decoration: none;
   display: block;
@@ -214,8 +218,8 @@ position: -webkit-sticky;
   background-color: #fff;
   font-family: 'Heebo', sans-serif;
   color:#000;
-  font-weight:400;
-  font-size:12px;
+  font-weight:300;
+  font-size:14px;
   text-shadow:none;
 }
 
@@ -227,11 +231,19 @@ p{
   margin-top:-25px;
   font-family: 'Heebo', sans-serif;
   font-weight:300;
+  line-height:22px;
 }
 
 p a{
-  color:#fff;
+  color:#ff0;
   background-color:#f8e83b;
+  cursor:crosshair;
+}
+
+p a:hover{
+  color:#000;
+  text-decoration:none;
+  cursor:crosshair;
 }
 
 .img{
@@ -240,11 +252,15 @@ p a{
 
 .projects{
   position:relative;
-  padding-top:0px;
+  padding-top:75px;
 }
 
-.pimage{
- padding-top:75px;
+.pimageextra{
+ margin-top:200px; 
+}
+
+.pvideoextra{
+ margin-top:200px;
 }
 
 .desc{
@@ -301,10 +317,15 @@ p a{
 
 
 /*** START OF MEDIA QUERIES!!!! ***/
-@media screen and (min-width: 1824px) {
+@media screen and (min-width: 1280px) {
+  
   .intro{
     font-size: 30px;
   }
+
+  .desc{ 
+  }
+
 }
 
 
@@ -314,7 +335,7 @@ p a{
   color: #000;
   font-family: 'Heebo', sans-serif;
   font-weight:300;
-  font-size:12px;
+  font-size:14px;
   text-shadow:none;
   text-decoration: none;
   display: block;
@@ -322,6 +343,7 @@ p a{
   padding-bottom:5px;
   border-bottom: solid 1px #000;
 }
+
 .dropdown1 a:hover{
   color:#000;
   background-color:#ff0;
@@ -362,11 +384,10 @@ p a{
   .dropdown1{
    position:relative;
     display:none;
-    color:#3b5cff;
-    font-family: 'Chivo', sans-serif;
-    font-weight:700;
-    font-size:28px;
-    text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
+    color:#000;
+    font-family: 'Heebo', sans-serif;
+    font-weight:300;
+    font-size:14px;
     -moz-transition: 3s, 1.5s;  
     -webkit-transition: 3s, 1.5s;
     z-index:30;
@@ -460,7 +481,7 @@ p a{
       
    <div class="nav">
      <label for="drop-2" class="toggle toggle2">3d</label>
-      <a href="#">3d&nbsp;</a>
+      <a href="#">3d</a>
      <input type="checkbox" id="drop-2" />
    <div class="dropdown dropdown1">
      <a href="/">holy sh*t!</a>
@@ -472,7 +493,7 @@ p a{
       
     <div class="nav">
       <label for="drop-3" class="toggle toggle2">print</label>
-      <a href="#">print&nbsp;</a>
+      <a href="#">print</a>
       <input type="checkbox" id="drop-3" />
       <div class="dropdown dropdown1">
     <a href="/">vb&r</a>
@@ -484,12 +505,12 @@ p a{
    </div>
     <div class="nav">
       <label for="drop-4" class="toggle toggle2">motion</label>
-      <a href="#">motion&nbsp;</a>
+      <a href="#">motion</a>
       <input type="checkbox" id="drop-4" />
       <div class="dropdown dropdown1">
-    <a href="/">the fairly odd parents</a>
-    <a href="/">how to make a salad</a>
-    <a href="/">finding nemo</a>
+    <a href="/fairlyoddparents">the fairly odd parents</a>
+    <a href="/salad">how to make a salad</a>
+    <a href="/kinetic">kinetic typography</a>
    </div>
    </div>
     
