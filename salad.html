@@ -235,8 +235,8 @@ p{
 }
 
 p a{
-  background-color:#ff0;
-  color:#000;
+  color:#ff0;
+  background-color:#f8e83b;
   cursor:crosshair;
 }
 
@@ -252,11 +252,11 @@ p a:hover{
 
 .projects{
   position:relative;
-  margin-top:75px;
+  padding-top:75px;
 }
 
 .pimageextra{
- margin-top:200px;
+ margin-top:200px; 
 }
 
 .pvideoextra{
@@ -317,15 +317,15 @@ p a:hover{
 
 
 /*** START OF MEDIA QUERIES!!!! ***/
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) {
   
   .intro{
     font-size: 30px;
   }
-  
+
   .desc{ 
   }
-  
+
 }
 
 
@@ -343,7 +343,7 @@ p a:hover{
   padding-bottom:5px;
   border-bottom: solid 1px #000;
 }
-  
+
 .dropdown1 a:hover{
   color:#000;
   background-color:#ff0;
@@ -379,6 +379,7 @@ p a:hover{
     -moz-transition: 3s, 1.5s;  
     -webkit-transition: 3s, 1.5s;
     z-index:40;
+    cursor:crosshair;
 	}
 
   .dropdown1{
@@ -395,7 +396,7 @@ p a:hover{
   
   
 	/* Styling the toggle lable */
-	.toggle{
+	.toggle {
     position: -webkit-sticky;
     position: sticky;
     top:0;
@@ -412,6 +413,7 @@ p a:hover{
     -moz-transition: 3s, 1.5s;  
     -webkit-transition: 3s, 1.5s; 
     z-index:40;
+    cursor:crosshair;
 	}
   
   .toggle2{
@@ -462,13 +464,13 @@ p a:hover{
   
   </div>
  
-<label for="drop" class="toggle">navigation</label>
+<label for="drop" class="toggle">menu</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
   <div class="navbar">
   <div class="nav">
     <label for="drop-1" class="toggle toggle2">2d</label>
-    <a href="#">2d</a>
+    <a class="toggle2">2d</a>
     <input type="checkbox" id="drop-1" />
       <div class="dropdown dropdown1">
     <a href="/">light project</a>
@@ -480,7 +482,7 @@ p a:hover{
       
    <div class="nav">
      <label for="drop-2" class="toggle toggle2">3d</label>
-      <a href="#">3d</a>
+      <a class="toggle2">3d</a>
      <input type="checkbox" id="drop-2" />
    <div class="dropdown dropdown1">
     <a href="/">holy sh*t!</a>
@@ -492,7 +494,7 @@ p a:hover{
       
     <div class="nav">
       <label for="drop-3" class="toggle toggle2">print</label>
-      <a href="#">print</a>
+      <a class="toggle2">print</a>
       <input type="checkbox" id="drop-3" />
       <div class="dropdown dropdown1">
     <a href="/">vb&r</a>
@@ -504,7 +506,7 @@ p a:hover{
    </div>
     <div class="nav">
       <label for="drop-4" class="toggle toggle2">motion</label>
-      <a href="#">motion</a>
+      <a class="toggle2">motion</a>
       <input type="checkbox" id="drop-4" />
       <div class="dropdown dropdown1">
     <a href="/">the fairly odd parents</a>
@@ -531,7 +533,7 @@ p a:hover{
     
     
   <div class="nav">
-    <a href="#">a.</a>
+    <a href="/about">a.</a>
     <!--
       <div class="dropdown">
      <a href="/">project name will be here</a>
