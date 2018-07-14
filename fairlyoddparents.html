@@ -19,6 +19,8 @@
 $(document).ready(function(){ 
   $(".projects").addClass("animated slideInUp");
   $(".intro").addClass("animated slideInUp");
+  $(".grid").addClass("animated slideInUp");
+  $(".about").addClass("animated slideInUp");
 });
 </script>
 <!--END JS SCRIPTS-->  
@@ -28,14 +30,43 @@ $(document).ready(function(){
   
 <!--START CSS STYLE-->
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css?family=Chivo:400,400i,700,700i,900,900i|Heebo:100,300,400,700,900|Open+Sans:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i|Shrikhand');
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  color:#000;
+}
+
+body a{
+  cursor:crosshair;
+}
+
+.col-md-7{
+ padding-top:10px; 
+}
+
+.about{
+  position:relative;
+  margin: auto;
+  padding:25px 15px 25px 15px;
+  margin-top:75px;
+  margin-bottom:75px;
+  background-color:#ffffdd;
+  color:#000;
+  border:solid 1px #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size:16px;
+  line-height:26px;
+}
 
 #header{
   position:relative;
   background-color:#fff;
   opacity:1;
   z-index:20;
-  padding-bottom:5px;
+  padding-bottom:0px;
 }
 
 .container{
@@ -45,12 +76,21 @@ $(document).ready(function(){
   padding-bottom:30px;
 }
 
+.grid{
+  margin-top:7%;
+}
+
+.img-grid{
+  width:100%;
+  padding-bottom:12%;
+}
+
 .footer{
   padding-top:20px;
   padding-bottom:10px;
   color:#000;
-  font-family: 'Heebo', sans-serif;
-  font-weight:400;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400i;
   font-size:9.5px;
   text-align:center;
   position: bottom;
@@ -60,64 +100,34 @@ h1{
   position:relative;
   display:inline-block;
   margin-right:5px;
-  background-color:#fff;
-  color:#3b5cff;
-  font-family: 'Chivo', sans-serif;
-  font-weight:700;
+  background-color:none;
+  color:#fff;
+  font-family: 'Shrikhand';
+  font-weight:400;
   font-size:64px;
-  text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
   z-index:none;
 }
 
 h1 a, h1 a:hover{
-  background-color:#fff;
-  color:#3b5cff;
-  font-family: 'Chivo', sans-serif;
-  font-weight:900;
-  font-size:64px;
-  text-shadow:-1px 1px 0 #000, -4px 4px 0 #ff0, -5px 5px 0 #000;
-  text-decoration:none;
-  cursor:crosshair;
-}
-
-h3{
-  position:relative;
-  color:#000;
   background-color:none;
-  display:inline-block;
-  font-family: 'Heebo', sans-serif;
-  font-weight:300;
-  font-size:15px;
-  -moz-transition: 2.5s, 1s;  
-  -webkit-transition: 2.5s, 1s;
-  z-index:10;
-  margin-right:15px;
-  margin-top:55px;
-}
-
-h3 a{
-  color:#000;
-  cursor:crosshair;
-  text-decoration:none;
-}
-
-h3 a:hover{
-  color:#000;
-  cursor:crosshair;
-  background-color:#ff0;
-  -moz-transition: .5s ease-in-out;  
-  -webkit-transition: .5s ease-in-out;
+  color:#fff;
+  font-family: 'Shrikhand';
+  font-weight:400;
+  font-size:64px;
+  -webkit-text-stroke: 1.25px black;
+  text-shadow:-2px 2px 0 #000, -3px 3px 0 #ff0, -4px 4px 0 #000;
   text-decoration:none;
 }
 
 .navbar{
-  background-color:#fff;
+  background-color:none;
   position: -webkit-sticky;
   position: sticky;
   top:0;
   margin-left:-40px;
   z-index:40;
-  border: solid 1px #000;
+  border-top: solid 1px #000;
+  padding-top:15px;
   border-radius:0px;
 }
 
@@ -132,31 +142,24 @@ position: -webkit-sticky;
   display:inline-block;
   float:left;
   margin-right:none;
-  color:#3b5cff;
-  font-family: 'Chivo', sans-serif;
-  font-weight:700;
-  font-size:28px;
-  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
   -moz-transition: 3s, 1.5s;  
   -webkit-transition: 3s, 1.5s;
-  cursor:crosshair;
 }
 
 .nav a{
-  color:#3b5cff;
-  font-family: 'Chivo', sans-serif;
+  color:#fff;
+  font-family: 'Shrikhand', sans-serif;
   font-weight:700;
   font-size:28px;
-  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
   text-decoration:none;
+  -webkit-text-stroke: .25px black;
+  text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
   -moz-transition: 1s ease-in-out;  
   -webkit-transition: 1s ease-in-out;
-  cursor:crosshair;
 }
 
 .nav a:hover{
   background-color:none;
-  cursor:crosshair;
 }
 
 .nav:hover .dropdown1{
@@ -169,42 +172,12 @@ position: -webkit-sticky;
 [id^=drop] {
 	display: none;
   color:#fff;
-  font-family: 'Chivo', sans-serif;
-  font-weight:700;
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
   font-size:28px;
   text-shadow: -3px 2px 0 #000, -4px 3px 0 #ff0;
   -moz-transition: 3s, 1.5s;  
   -webkit-transition: 3s, 1.5s;
-}
-
-.dropdown{
-  position:absolute;
-  width:auto;
-  display:none;
-  background-color: #fff;
-  font-family: 'Heebo', sans-serif;
-  color:#000;
-  font-weight:300;
-  font-size:14px;
-  text-shadow:none;
-}
-
-.dropdown a{
-  width:100%;
-  color: #000;
-  font-family: 'Heebo', sans-serif;
-  font-weight:300;
-  font-size:14px;
-  text-shadow:none;
-  text-decoration: none;
-  display: block;
-  padding: 5px 5px 3px 5px;
-  border-bottom: solid 1px #000;
-}
-
-.dropdown a:hover{
-  color:#000;
-  background-color:#ff0;
 }
 
 .nav:hover .dropdown{
@@ -212,25 +185,9 @@ position: -webkit-sticky;
   float:none;
 }
 
-.dropdown1{
-  position:absolute;
-  width:auto;
-  display:none;
-  background-color: #fff;
-  font-family: 'Heebo', sans-serif;
-  color:#000;
-  font-weight:300;
-  font-size:14px;
-  text-shadow:none;
-}
-
-body{
-  color:#000;
-}
-
 p{
   margin-top:-25px;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight:300;
   line-height:22px;
 }
@@ -238,22 +195,16 @@ p{
 p a{
   color:#ff0;
   background-color:#f8e83b;
-  cursor:crosshair;
 }
 
 p a:hover{
   color:#000;
   text-decoration:none;
-  cursor:crosshair;
-}
-
-.img{
-  width:100%;
 }
 
 .projects{
   position:relative;
-  padding-top:75px;
+  margin-top:7%;
 }
 
 .pimageextra{
@@ -266,90 +217,66 @@ p a:hover{
 
 .desc{
   position:relative;
-  padding:15px 15px 15px 25px;
-  margin-left:4px;
   margin-bottom:75px;
   margin-top:35px;
   background-color:#fff;
   color:#000;
-  border:solid 1px #000;
-  font-family: 'Heebo', sans-serif;
+  border-left:none;
+  font-family: 'Roboto', sans-serif;
   font-weight:300;
-  box-shadow: 0px 0px 0 #000, -3px 3px 0 #ff0, -4px 4px 0 #000;
-  line-height:22px;
+  font-size:14px;
+  line-height:24px;
 }
 
 .desc a{
   background-color:#ff0;
   color:#000;
-  cursor:crosshair;
 }
 
 .desc a:hover{
   background-color:#ff0;
   color:#000;
   text-decoration:none;
-  cursor:crosshair;
 }
 
 .intro{
   position:relative;
-  padding:25px 25px 25px 35px;
+  max-width:550px;
+  margin: auto;
+  padding:25px 20px 20px 30px;
   margin-top:75px;
-  margin-left:7px;
   margin-bottom:75px;
-  background-color:#fff;
+  background-color:#ffffdd;
   color:#000;
-  border:solid 2px #000;
-  font-family: 'Chivo', sans-serif;
-  font-weight:400;
-  font-size:calc(11px + 1.5vw);
+  border:solid 1px #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  font-size:18px;
   text-shadow:none;
-  box-shadow: 0px 0px 0 #000, -5px 5px 0 #ff0, -7px 7px 0 #000;
-  line-height:calc(36px + 1.5vw);
+  line-height:34px;
 }
 
 .arrow{
-  font-size:calc(36px + 1.5vw);
+  font-size:34px;
   text-align:center;
-  padding:calc(33px + 1.5vw) 0px calc(35px + 1.5vw) 0px;
+  font-family: 'Roboto', sans-serif;
+  font-weight:300;
+  padding:10%;
 }
 
 
 
 /*** START OF MEDIA QUERIES!!!! ***/
 @media screen and (min-width: 1280px) {
-  
-  .intro{
-    font-size: 30px;
-    line-height:55px;
-  }
-
-  .desc{ 
-  }
-
 }
 
+@media only screen and (max-width:990px){
+}  
 
 @media only screen and (max-width:768px){
-  .dropdown1 a{
-  width:100%;
-  color: #000;
-  font-family: 'Heebo', sans-serif;
-  font-weight:300;
-  font-size:14px;
-  text-shadow:none;
-  text-decoration: none;
-  display: block;
-  padding-top:5px;
-  padding-bottom:5px;
-  border-bottom: solid 1px #000;
-}
-
-.dropdown1 a:hover{
-  color:#000;
-  background-color:#ff0;
-}
+  .col-md-7{
+    padding-top:35px;
+  }
   
   .nav{
     width:100%;
@@ -361,6 +288,7 @@ p a:hover{
   .navbar{
     position:relative;
     margin-left:none;
+    border:none;
   }
   
  .nav:hover .dropdown{
@@ -374,28 +302,18 @@ p a:hover{
     top:40px;
     display:none;
     color:#3b5cff;
-    font-family: 'Chivo', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight:700;
     font-size:28px;
     text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
     -moz-transition: 3s, 1.5s;  
     -webkit-transition: 3s, 1.5s;
     z-index:40;
-    cursor:crosshair;
-	}
-
-  .dropdown1{
-   position:relative;
-    display:none;
-    color:#000;
-    font-family: 'Heebo', sans-serif;
-    font-weight:300;
-    font-size:14px;
-    -moz-transition: 3s, 1.5s;  
-    -webkit-transition: 3s, 1.5s;
-    z-index:30;
 	}
   
+  .menu{
+    margin-top:-20px;
+  }
   
 	/* Styling the toggle lable */
 	.toggle {
@@ -404,26 +322,20 @@ p a:hover{
     top:0;
     padding-left:10px;
 		display: block;
-    background-color:#fff;
+    background-color:none;
     opacity:1;
-    color:#3b5cff;
-    font-family: 'Chivo', sans-serif;
-    font-weight:700;
-    font-size:28px;
+    color:#fff;
+    font-family: 'Shrikhand', sans-serif;
+    font-size:42px;
+    -webkit-text-stroke: .75px black;
     text-shadow:-1px 1px 0 #000, -2px 2px 0 #ff0, -3px 3px 0 #000;
-    border:solid 1px #000;
+    border-top:solid 1px #000;
+     text-decoration:none;
     -moz-transition: 3s, 1.5s;  
     -webkit-transition: 3s, 1.5s; 
     z-index:40;
-    cursor:crosshair;
 	}
   
-  .toggle2{
-    position: relative;
-    padding-left:0;
-    border:none;
-    z-index:30;
-	}
 
 	.toggle:hover {
 		
@@ -460,105 +372,41 @@ p a:hover{
   
   
 <!--START HTML CODE-->
+<body>
 <div class="container">
 <div id="header">
-  <h1 class="animated swing"><a href="/">안녕,</a></h1>
+  <h1 class="animated swing"><a href="/">= o<span style="font-size:58px;"><sup>2</sup></span></a></h1>
   
   </div>
  
-<label for="drop" class="toggle">menu</label>
+<label for="drop" class="toggle">↯</label>
         <input type="checkbox" id="drop" />
             <ul class="menu">
   <div class="navbar">
-  <div class="nav">
-    <label for="drop-1" class="toggle toggle2">2d</label>
-    <a class="toggle2">2d</a>
-    <input type="checkbox" id="drop-1" />
-      <div class="dropdown dropdown1">
-    <a href="/light">light project</a>
-    <a href="/">drawing</a>
-    <a href="/">illustration</a>
-    <a href="/">recycled photography</a>
-   </div>
+  
+    <div class="nav">
+    <a href="/work">work</a>
    </div>   
-      
+ 
    <div class="nav">
-     <label for="drop-2" class="toggle toggle2">3d</label>
-      <a class="toggle2">3d</a>
-     <input type="checkbox" id="drop-2" />
-   <div class="dropdown dropdown1">
-    <a href="/holyshit">holy sh*t!</a>
-    <a href="/">a breath of fresh air</a>
-    <a href="/">wearables</a>
-    <a href="/">food series</a>
+    <a href="https://drive.google.com/uc?export=download&id=18qha6BRpmLt8hfEQBn4tLbYlohSivnlc" download>resume</a>
    </div>
-   </div>
-      
-    <div class="nav">
-      <label for="drop-3" class="toggle toggle2">print</label>
-      <a class="toggle2">print</a>
-      <input type="checkbox" id="drop-3" />
-      <div class="dropdown dropdown1">
-    <a href="/vbr">vb&r</a>
-    <a href="/typography">typography</a>
-    <a href="/layout">publication layout</a>
-    <a href="/">artist services</a>
-    <a href="/">dérive</a>
-   </div>
-   </div>
-    <div class="nav">
-      <label for="drop-4" class="toggle toggle2">motion</label>
-      <a class="toggle2">motion</a>
-      <input type="checkbox" id="drop-4" />
-      <div class="dropdown dropdown1">
-    <a href="/fairlyoddparents">the fairly odd parents</a>
-    <a href="/salad">how to make a salad</a>
-    <a href="/kinetic">kinetic typography</a>
-   </div>
-   </div>
-    
-   <!-- save for web design/ux/ui stuff
-
-    <div class="nav">
-      <label for="drop-5" class="toggle toggle2">misc</label>
-      <a href="#">misc</a>
-      <input type="checkbox" id="drop-5" />
-      <div class="dropdown dropdown1">
-     <a href="/">project name will be here</a>
-    <a href="/">Link 2</a>
-    <a href="/">Link 3</a>
-   </div>
-   </div>
-
- -->
-    
-    
     
   <div class="nav">
-    <a href="/about">a.</a>
-    <!--
-      <div class="dropdown">
-     <a href="/">project name will be here</a>
-    <a href="/">Link 2</a>
-    <a href="/">Link 3</a>
-   </div>
--->
+    <a href="/about">about</a>
    </div>
       </div>
   </ul>
-  
-  
+ 
 <div class="projects"> 
   <div class="pvideo" id="1">
 <style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/233913346' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>
   </div>
  
  <div class="desc">
-  <b>specs:</b> found sound.
-   <br/>
-   a modern redesign of the opening theme song animation for <i>the fairly oddparents</i> cartoon series. emphasis on typography and flat design.
-   <br/>
-   <b>completed:</b> 2015.
+  this animation was my first attempt working with flash (back when animate was called flash) to create a frame by frame based off of found sound. i chose the opening theme song from <a href="https://www.youtube.com/watch?v=no8vgXg_rlw">the fairly oddparents</a> cartoon series to explore its typographical potential through animate word play.
+   <br/><br/>
+   because this project was purely sound-driven, i wanted to take the existing animation out of the equation and bring the lyrics to life with a minimal and modern concept. redesigning the iconic intro with an emphasis on typography and flat graphics really allowed me to focus on the lyrics and the effects of each accompanying sound. 2015.
     </div> 
   </div>
   </div>
@@ -567,5 +415,6 @@ p a:hover{
   <div class="footer">
     &copy; 2018 made in the jieuuniverse
   </div>
+</body>
 </html>
 <!--END HTML CODE-->
